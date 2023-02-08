@@ -4,7 +4,6 @@
 function elemCreator(elem,callback)
 {
     elem=document.createElement(elem)
-    console.log(elem)
     callback(elem)
     document.body.appendChild(elem)
 }
