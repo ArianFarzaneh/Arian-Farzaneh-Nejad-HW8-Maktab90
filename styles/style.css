@@ -1,19 +1,118 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+
+body{
+  width: 100%;
+  height: 100%;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+} 
+.container{
+  width: 100%;
+  height: 100%;
+  background-color: #fcfcfc;
+}
+.upper-shape{
+  margin-left: auto;
+  width: 155px ;
+  height: 155px;
+  background-color:#0984e2;
+  border-radius: 0 0 0 155px;
+}
+.cards{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card{
+  padding-left: 3%;
+  padding-right: 3%;
+  border-radius: 10px;
+  width: 20%;
+  height: 320px;
+  background-color: #ffffffff;
+  box-shadow: -2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: 200ms ease-in-out;
+}
+.card:hover{
+  box-shadow: -10px 10px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: 200ms ease-in-out;
+}
+.card-counter{
+  box-shadow: -2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 200%;
+  background-color:white;
+  text-align: center;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.card-logo{
+  text-align: center;
+  font-size: 300%;
+  color: #0984e2;
+}
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 120%;
+  margin-bottom: 4%;
+}
+.card-description{
+  text-align: center;
+}
+.lowwer-shape{
+  margin-right: auto;
+  width: 155px ;
+  height: 155px;
+  border-radius: 0 155px 0 0;
+  background-color:#0984e2;
+  position: absolute;
+  bottom: 0;
+}
+@media only screen and (max-width: 768px) { /*for portrait tablets (this is max-width because i didnt make it mobile first!)*/
+  .upper-shape{
+    width: 120px ;
+    height: 120px;
+    border-radius: 0 0 0 120px;
   }
-  html{
-    font-size: 62.5%;
+  .lowwer-shape{
+    width: 120px ;
+    height: 120px;
+    border-radius: 0 120px 0 0;
   }
-  
-  body{
-    width: 100%;
-    height: 100%;
-    font-size: 1.6rem;
-    font-family: sans-serif;
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-  } 
+  .cards{
+    margin-top: 10%;
+  }
+  .card{
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 576px) {/*for mobiles*/
+  .cards{
+    display: block;
+    margin:20% 0 0 5%;
+  }
+  .card{
+    width: 90%;
+    margin-bottom: 15%;
+  }
+  .lowwer-shape{
+    top: 220%;
+  }
+}
